@@ -30,3 +30,6 @@ class MessageModel(BaseModel):
     image = models.ImageField(upload_to="", blank=True, null=True)
     date = models.DateTimeField(default=timezone.now)
     is_read = models.BooleanField(default=False)
+
+    def send_message(self, message):
+        pass
