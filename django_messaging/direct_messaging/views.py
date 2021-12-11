@@ -5,3 +5,5 @@ from .forms import MessageForm
 
 
 # Create your views here.
+def inbox(request):
+    pass
