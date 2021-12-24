@@ -4,5 +4,5 @@ from django.urls import path
 
 
 urlpatterns = [
-    path("inbox/", TemplateView.as_view(template_name="direct_messaging/inbox.html"), name="home"),
+    path("inbox/", TemplateView.as_view(template_name="direct_messaging/inbox.html"), name="inbox"),
 ]

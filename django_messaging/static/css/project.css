@@ -1,62 +1,119 @@
-/* These styles are generated from project.scss. */
-
-.alert-debug {
-  color: black;
-  background-color: white;
-  border-color: #d6e9c6;
+:root{
+    --grey: #e8e8e8;
+    --blue: #74b9ff;
 }
 
-.alert-error {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #eed3d7;
+#left{
+    background-color: #F8F8F8;
 }
 
-/* CHAT */
-
-body{margin-top:20px;}
-
-.chat-online {
-    color: #34ce57
+#right{
+    background-color: #F5F5F5;
 }
 
-.chat-offline {
-    color: #e4606d
+
+#profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
 }
 
-.chat-messages {
+.chat-list{
+    padding: 10px 15px;
     display: flex;
-    flex-direction: column;
-    max-height: 800px;
-    overflow-y: scroll
+    vertical-align: baseline;
+    transition: .3s ease;
 }
 
-.chat-message-left,
-.chat-message-right {
+.chat-list:hover{
+    background-color: var(--grey);
+    cursor: pointer;
+}
+
+.profile-text{
+    width: 70%;
+    margin-left: 12px;
+
+}
+
+.profile-name{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+ .new-message{
+    margin: 0;   
+}
+
+.text-muted{
+    opacity: 0.5 !important;
+}
+
+hr {
+    margin: 5px auto;
+    width: 60%;
+}
+
+.chat-session{
     display: flex;
-    flex-shrink: 0
+    padding: 10px;
+    background-color: var(--grey);
+
 }
 
-.chat-message-left {
-    margin-right: auto
+.chat-bubble{
+    padding: 10px 15px;
+    background: #eee;
+    margin: 10px 30px;
+    border-radius: 9px;
+    position: relative;
+    animation: fadeIn .1s ease-in;
 }
 
-.chat-message-right {
-    flex-direction: row-reverse;
-    margin-left: auto
+.chat-bubble:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom: 0;
+    margin-top: -10px;
 }
-.py-3 {
-    padding-top: 1rem!important;
-    padding-bottom: 1rem!important;
+
+.chat-bubble--left:after{
+    left: 0;
+    border-right-color: var(--grey);
+    border-left: 0;
+    margin-left: -20px;
 }
-.px-4 {
-    padding-right: 1.5rem!important;
-    padding-left: 1.5rem!important;
+
+.chat-bubble--right:after{
+    right: 0;
+    border-left-color: var(--blue);
+    border-right: 0;
+    margin-right: -20px;
 }
-.flex-grow-0 {
-    flex-grow: 0!important;
+
+.offset-md-9 .chat-bubble{
+    background-color: var(--blue);
+    color: #fff;
 }
-.border-top {
-    border-top: 1px solid #dee2e6!important;
+
+.chat-tray{
+    background: #F8F8F8;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-top: 20px;
+}
+
+.chat-tray i {
+    color: grey;
+    font-size: 30px;
+    vertical-align: middle;
+}
+i:last-of-type{
+    margin-left: 25px;
 }
 
