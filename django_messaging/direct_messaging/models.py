@@ -26,7 +26,7 @@ class BaseModel(models.Model):
 class MessageModel(BaseModel):
     # thread = models.ForeignKey("MessageThreadModel", related_name="+", on_delete=models.CASCADE, blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="+")
-    sender_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="sender")
+    sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name="sender")
     recipient = models.ForeignKey(User, on_delete=models.CASCADE, related_name="receiver")
     body = models.CharField(max_length=1000)
     image = models.ImageField(upload_to="", blank=True, null=True)
