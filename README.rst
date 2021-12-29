@@ -67,3 +67,18 @@ Deployment
 ----------
 
 The following details how to deploy this application.
+
+
+Commands
+--------
+1. Access Postgres Database
+`sudo -u postgres psql`
+
+2. Check all databases
+`\l`
+
+3. Enter a database
+`\c database` 
+
+4. List all tables 
+`\dt`
