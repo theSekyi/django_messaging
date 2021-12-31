@@ -26,5 +26,5 @@ def inbox(request):
 
         context = {"directs": directs, "messages": messages, "active_direct": active_direct}
 
-    # template = loader.get_template("direct_messaginf/inbox.html")
-    # return HttpResponse(template.render(context, request))
+    template = loader.get_template("direct_messaginf/inbox.html")
+    return HttpResponse(template.render(context, request))
