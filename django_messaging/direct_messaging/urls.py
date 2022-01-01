@@ -1,8 +1,9 @@
 from django.views.generic import TemplateView
 
 from django.urls import path
+from .views import inbox
 
 
 urlpatterns = [
-    path("inbox/", TemplateView.as_view(template_name="direct_messaging/inbox.html"), name="inbox"),
+    path("inbox/", inbox, name="inbox"),
 ]
