@@ -13,7 +13,7 @@ urlpatterns = [
     # User management
     path("users/", include("django_messaging.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
-    path("dm/", include("django_messaging.direct_messaging.urls"))
+    path("inbox/", include("django_messaging.direct_messaging.urls"))
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
