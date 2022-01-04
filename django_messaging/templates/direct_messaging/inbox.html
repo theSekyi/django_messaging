@@ -24,32 +24,20 @@
 			</div>
 		  </div>
 		</div>
-		{% for message in messages %}
-		<a class={% if active_direct == message.user.username %}is-active{% endif %} href="">
-			<div class="row">
-			<div class="chat-list">
-				{% if message.user.profile.picture %}
-					<img
-					src="https://upload.wikimedia.org/wikipedia/commons/2/2d/JJH_Headshot.jpg"
-					id="profile-pic"
-					/>
-				{% else %}
-				<img
-				src="https://upload.wikimedia.org/wikipedia/commons/2/2d/JJH_Headshot.jpg"
-				id="profile-pic"
-				/>
-				{% endif %}
-				<div class="profile-text">
-				<h6 class="profile-name">{{ message.user.username }}</h6>
-				<p class="new-message text-muted">{{ message.body }}</p>
-				</div>
-				<span class="text-muted small">13:45</span>
+		<div class="row">
+		  <div class="chat-list">
+			<img
+			  src="https://upload.wikimedia.org/wikipedia/commons/2/2d/JJH_Headshot.jpg"
+			  id="profile-pic"
+			/>
+			<div class="profile-text">
+			  <h6 class="profile-name">Emmanuel Sekyi</h6>
+			  <p class="new-message text-muted">You are done</p>
 			</div>
-			</div>
+			<span class="text-muted small">13:45</span>
+		  </div>
 		</div>
-	  </a>
-	  {% endfor %}
-
+	  </div>
 	  <div class="col-8" id="right">
 		<div class="row">
 		  <div class="chat-session">
@@ -89,6 +77,6 @@
 		</div>
 	  </div>
 	</div>
-  </div>
 
+  </div>
 {% endblock content %}
