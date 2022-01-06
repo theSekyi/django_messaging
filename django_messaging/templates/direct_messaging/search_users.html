@@ -41,42 +41,12 @@
 		</div>
 	  </div>
 	  <div class="col-8" id="right">
-		<div class="row">
-		  <div class="chat-session">
-			<img
-			  src="https://upload.wikimedia.org/wikipedia/commons/2/2d/JJH_Headshot.jpg"
-			  id="profile-pic"
-			/>
-			<div class="profile-text">
-			  <h6 class="profile-name">Emmanuel Sekyi</h6>
-			</div>
-		  </div>
-		</div>
-		<div class="chat-panel">
-		  <div class="row">
-			<div class="col-md-3">
-			  <div class="chat-bubble chat-bubble--left">Hello dude!</div>
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-md-3 offset-md-9">
-			  <div class="chat-bubble chat-bubble--right">Hi Mate!</div>
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-12">
-			  <div class="chat-tray">
-				<textarea
-				  type="search"
-				  placeholder="reply"
-				  aria-label="Search"
-				  class="form-control form-control-lg"
-				></textarea>
-				<i class="material-icons">Reply</i>
-			  </div>
-			</div>
-		  </div>
-		</div>
+          
+        {% for user in users %}
+            <ol>
+                <li><a href="{% url 'search_users'%}">{{ user.username }}</a></li>
+            </ol>
+        {% endfor %}
 	  </div>
 	</div>
 
