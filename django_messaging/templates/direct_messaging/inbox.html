@@ -13,15 +13,16 @@
 		<div class="border-right">
 		  <div class="row">
 			<div class="col-12">
-			  <form class="form-inline my-2 my-lg-0" method="get" action="{% url "search_users" %}">
-				{% csrf_token %}
+			  <form class="form-inline my-2 my-lg-0" method="GET" action="{% url "search_users" %}">
 
 				<input
 				  class="form-control mr-sm-2"
 				  type="search"
 				  placeholder="Search Username"
 				  aria-label="Search"
+				  name="username"
 				/>
+				<button class="btn btn-primary" type="submit"> Submit</button
 			  </form>
 			</div>
 		  </div>

@@ -39,11 +39,13 @@ def inbox(request):
 
 @login_required
 def search_users_to_dm(request):
-    query = request.GET.get("q")
+    query = request.GET.get("username")
     users_paginator = None
+    print(f"Queries {query}")
 
     if query:
         users = User.objects.filter(Q(username__icontains=query))
+        print(users)
 
         paginator = Paginator(users, 5)
         page_number = request.GET.get("page")
